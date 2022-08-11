@@ -8,7 +8,7 @@
 
 from pycentral.base import ArubaCentralBase
 import creds as creds
-import os
+#import os
 
 central_info = creds.central_info
 central_info = central_info = creds.central_info
