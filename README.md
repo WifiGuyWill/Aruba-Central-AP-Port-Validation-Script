@@ -12,7 +12,7 @@ Bedroom-AP 505H CNKBKSN0SC Eth3 100 Full
 ```
 
 Download the repo, make sure Python is installed.
-Edit creds.py and enter the credentials for Aruba Central
+Edit creds.py and enter the credentials for Aruba Central.
 Then execute the script 'python3 main.py'
 
 The script will first generate a valid API key. It will then create a list of every active AP in Central. Lastly it will query the details of each AP and output the AP Name, Serail, Model, Port#, Speed and Duplex. This will be shown on the screen as the script executes, but will also be written to a file called 'ap_data.txt'.
