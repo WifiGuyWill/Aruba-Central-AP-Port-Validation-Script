@@ -40,7 +40,7 @@ def ap_details_eth0_only():
                 if eth["index"] == "0":
                     print(ap_name + " " + ap_model + " " + serial + " " + "Eth" + (eth["index"]) + " " + (eth["link_speed"]) + " " + (eth["duplex_mode"]))                    
                     ap_data.write(ap_name + " " + ap_model + " " + serial + " " + "Eth" + (eth["index"]) + " " + (eth["link_speed"]) + " " + (eth["duplex_mode"]) + "\n")
-#    os.remove("/temp/serial.txt")
+    #os.remove("/temp/serial.txt")
 
 #Use this function for stats on all AP ports
 def ap_details_all():
@@ -56,7 +56,7 @@ def ap_details_all():
                 if eth["status"] == "Up":
                     print(ap_name + " " + serial + " " + ap_model + " " + "Eth" + (eth["index"]) + " " + (eth["link_speed"]) + " " + (eth["duplex_mode"]))                    
                     ap_data.write(ap_name + " " + serial + " " + ap_model + " " + "Eth" + (eth["index"]) + " " + (eth["link_speed"]) + " " + (eth["duplex_mode"]) + "\n")
-#    os.remove("temp/serial.txt")
+    #os.remove("temp/serial.txt")
 
 if __name__ == "__main__":
     print("--- Starting ---")
