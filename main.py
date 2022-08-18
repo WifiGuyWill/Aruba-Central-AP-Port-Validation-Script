@@ -8,7 +8,6 @@
 
 from pycentral.base import ArubaCentralBase
 import creds as creds
-#import os
 
 central_info = creds.central_info
 central_info = central_info = creds.central_info
@@ -38,9 +37,8 @@ def ap_details_eth0_only():
             eth_speed = ap_details_response["ethernets"]
             for eth in eth_speed:
                 if eth["index"] == "0":
-                    print(ap_name + " " + ap_model + " " + serial + " " + "Eth" + (eth["index"]) + " " + (eth["link_speed"]) + " " + (eth["duplex_mode"]))                    
-                    ap_data.write(ap_name + " " + ap_model + " " + serial + " " + "Eth" + (eth["index"]) + " " + (eth["link_speed"]) + " " + (eth["duplex_mode"]) + "\n")
-    #os.remove("/temp/serial.txt")
+                    print(ap_name + " " + serial + " " + ap_model + " " + "Eth" + (eth["index"]) + " " + (eth["link_speed"]) + "Mbps " + "(" + (eth["duplex_mode"]) + " Duplex" + ")")                    
+                    ap_data.write(ap_name + " " + serial + " " + ap_model + " " + "Eth" + (eth["index"]) + " " + (eth["link_speed"]) + "Mbps " + "(" + (eth["duplex_mode"]) + " Duplex" + ")" "\n")
 
 #Use this function for stats on all AP ports
 def ap_details_all():
@@ -54,9 +52,8 @@ def ap_details_all():
             eth_speed = ap_details_response["ethernets"]
             for eth in eth_speed:
                 if eth["status"] == "Up":
-                    print(ap_name + " " + serial + " " + ap_model + " " + "Eth" + (eth["index"]) + " " + (eth["link_speed"]) + " " + (eth["duplex_mode"]))                    
-                    ap_data.write(ap_name + " " + serial + " " + ap_model + " " + "Eth" + (eth["index"]) + " " + (eth["link_speed"]) + " " + (eth["duplex_mode"]) + "\n")
-    #os.remove("temp/serial.txt")
+                    print(ap_name + " " + serial + " " + ap_model + " " + "Eth" + (eth["index"]) + " " + (eth["link_speed"]) + "Mbps " + "(" + (eth["duplex_mode"]) + " Duplex" + ")")                    
+                    ap_data.write(ap_name + " " + serial + " " + ap_model + " " + "Eth" + (eth["index"]) + " " + (eth["link_speed"]) + "Mbps " + "(" + (eth["duplex_mode"]) + " Duplex" + ")" "\n")
 
 if __name__ == "__main__":
     print("--- Starting ---")
