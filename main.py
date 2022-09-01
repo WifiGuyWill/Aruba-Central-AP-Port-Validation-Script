@@ -10,7 +10,6 @@ from pycentral.base import ArubaCentralBase
 import creds as creds
 
 central_info = creds.central_info
-central_info = central_info = creds.central_info
 central = ArubaCentralBase(central_info=central_info, ssl_verify=True)
 
 #This function will generate a list of the serial numbers for all active APs
